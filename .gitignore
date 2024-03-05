@@ -2,3 +2,5 @@
 *.json
 /output
 /entrevistas
+/__pycache__
+```
