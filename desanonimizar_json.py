@@ -42,9 +42,13 @@ def desanonimizar_json(json_file, output_folder):
 
     text = data['text']
 
-    # reemplazar ENT1, ENT2, ENT3, etc por ENT
-    for i in range(1, 11):
+    for i in range(1, 8):
+        text = text.replace(f'ENT {i}', 'ENT')
         text = text.replace(f'ENT{i}', 'ENT')
+
+    for i in range(1, 8):
+        text = text.replace(f'TEST {i}', 'TEST')
+        text = text.replace(f'TEST{i}', 'TEST')
 
     # separar el texto por párrafos, un párrafo por ejemplo es una pregunta que empieza por ENT
     paragraphs = text.split('ENT:')
